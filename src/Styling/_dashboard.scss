@@ -1,0 +1,106 @@
+.dashboard_container {
+    background-color: white;
+    padding-top: 90px;
+    padding-left: 220px;
+    
+}
+.text-dash {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    min-height: max-content;
+    
+    width: 96%;
+
+}
+.category-heading {
+    padding: 20px;
+    font-size: calc(14px + 0.8vw);
+}
+.category-table {
+    margin: 20px 0 20px 20px;
+    padding: 20px;
+}
+.breadcrumb {
+    margin-left: 20px;
+}
+.path-active {
+    color: blue;
+}
+.main-layout {
+    margin-bottom: calc(50px + 10vh);
+}
+.dashboard-heading {
+    padding: 20px;
+}
+
+.dashboard_card {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 20px;
+    &-box {
+        width: 48%;
+        display: flex;
+        gap: calc(10px + 0.2vw);
+        flex-wrap: wrap;
+        &_item {
+            background-color: whitesmoke;
+            border-radius: 8px;
+            width: 45%;
+            flex-grow: 1;
+            @include flexBox(center,center,column);
+            & p:first-of-type {
+                font-size: calc(1.2rem + 0.4vw);
+                font-weight: 600;
+                color: #008001;
+            }
+            & p:last-of-type {
+                margin-top: 10px;
+                color: #008001;
+            }
+
+            
+        }
+    }
+    &-chart {
+        width: 48%;
+    }
+
+
+    
+    @include tabView {
+        flex-direction: column;
+        width: 100%;
+        &-box {
+            width: 98%;
+            &_item {
+                background-color: whitesmoke;
+                min-height: 12vh;
+    
+                
+            }
+    
+        }
+        &-chart {
+            width: 98%;
+        }
+    }
+    @include mobileView {
+        flex-direction: column;
+        width: 100%;
+        &-box {
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            &_item {
+                width: 100%;
+            }
+        }
+        &-chart {
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background-color: whitesmoke;
+    color: #262323;
+    text-align: center;
+    padding: 25px 0px;
+  }

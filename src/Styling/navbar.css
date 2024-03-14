@@ -1,0 +1,71 @@
+.dashboard_container {
+  background-color: white;
+  padding-top: 80px;
+  padding-left: 240px;
+}
+
+.text-dash {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  height: 90vh;
+  width: 96%;
+}
+
+.category-heading {
+  padding: 20px;
+  font-size: calc(14px + 0.8vw);
+}
+
+.category-table {
+  margin: 20px 0 20px 20px;
+  padding: 20px;
+}
+
+.breadcrumb {
+  margin-left: 20px;
+}
+
+.path-active {
+  color: blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Navwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  padding: 0px 50px;
+  z-index: 10;
+}
+.Navwrapper .logo {
+  height: 50px;
+  display: flex;
+}
+.Navwrapper .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Navwrapper .links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.Navwrapper .profile {
+  display: flex;
+  padding: 8px 15px;
+  color: black;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=navbar.css.map */

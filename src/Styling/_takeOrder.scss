@@ -1,0 +1,120 @@
+
+.go-backbtn {
+    margin: 20px 0 0 20px;
+}
+
+.tableHeading {
+    margin: 0 20px 0 20px;
+}
+.take-order-input {
+    margin: 20px 20px 0px 20px;
+    @include flexBox(space-between,center);
+    & p {
+        width: 54%;
+    }
+    & p:last-of-type {
+        width: 38%;
+    }
+}
+.takeorder {
+    padding: 0px 20px 10px 20px;
+    &-item {
+        background-color: whitesmoke;
+        border-radius: 4px;
+        @include flexBox(space-between,center);
+        transition: all 0.2s ease-in-out;
+        margin-top: 10px;
+        & p {
+            
+            padding: 10px;
+        }
+        & p:first-of-type {
+
+            width: 60%;
+        }
+        & p:nth-of-type(2) {
+
+            width: 15%;
+        }
+        & p:last-of-type {
+            margin-right: 1vw;
+            @include flexBox(flex-end,center);
+            gap: 10px;
+            width: 20%;
+        }
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            background-color: rgb(87, 56, 87);
+            cursor: pointer;
+            & p {
+                color: white;
+            }
+        }
+    }
+}
+.takeorder-item-header {
+    @extend .takeorder-item;
+    background-color: white;
+    &:hover {
+        background-color: white;
+        & p {
+            color: black;
+        }
+        cursor: auto;
+    }
+    & p {
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+}
+.take-order-submit {
+    @include flexBox(flex-end,center);
+    margin: 20px 20px 20px 0;
+    padding-bottom: 30px;
+
+}
+.order-details {
+    width: 100%;
+    background-color: rgb(239, 239, 231);
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+    &_downloadbtn {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: 30px;
+    }
+    &_img {
+        @include flexBox(center,center,column);
+        & img {
+            height: 120px;
+            width: 160px;
+            object-fit: contain;
+        }
+    }
+    &_des {
+        width: 100%;
+        & >div {
+            padding: 20px 5px;
+            @include flexBox(space-between,center);
+        }
+    }
+}
+.order-details_table-footer {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    & > div {
+        width: 30%;
+        background-color: white;
+    padding: 20px;
+    margin-top: 15px;
+    @include flexBox(flex-start,flex-end,column);
+    & p {
+        line-height: 35px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    }
+}

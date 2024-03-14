@@ -1,0 +1,61 @@
+@import './mixins';
+@import './dashboard';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Navwrapper{
+    @include flexBox(space-between,center);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 0px 50px;
+    z-index: 10;
+    .logo{
+      height: 60px;
+      display: flex;
+    }
+
+    .logo img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .profile{
+      display: flex;
+      color: black;
+      & p {
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 24px;
+      }
+
+      cursor: pointer;
+      position: relative;
+      &-modal {
+        position: absolute;
+        top: 120%;
+        right: 0%;
+        zoom: 1;
+        background-color: white;
+        height: 50px;
+        width: 130px;
+        @include flexBox(center,center);
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out;
+        transform-origin: left;
+      }
+      &-modal.active {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+        transform-origin: right;
+      }
+      
+    }
+
+  } 
+   
